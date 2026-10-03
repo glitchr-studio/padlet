@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+require '/harness/vendor/autoload.php';
+Padlet\Harness\Console::create()->run();

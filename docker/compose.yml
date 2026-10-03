@@ -1,0 +1,22 @@
+# glitchr/padlet with your API key in .env:
+#
+#   cp .env.dist .env
+#   docker compose run --rm padlet me
+#   docker compose run --rm padlet board <id>
+#   docker compose run --rm padlet raw "/boards/<id>?include=posts,sections"
+#   docker compose run --rm padlet test
+name: padlet-harness
+
+services:
+  padlet:
+    build: .
+    image: glitchr/padlet-harness
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ..:/padlet/core
+      - harness:/harness
+
+volumes:
+  harness:

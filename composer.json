@@ -1,0 +1,29 @@
+{
+    "name": "glitchr/padlet",
+    "type": "library",
+    "description": "Padlet's API in PHP: a user's boards, their sections and posts, read with an API key, a post added - and its Symfony bundle.",
+    "keywords": ["padlet", "api", "education", "board"],
+    "license": "LGPL-3.0-or-later",
+    "authors": [{"name": "Marco Meyer", "email": "marco.meyer@glitchr.io"}],
+    "require": {
+        "php": ">=8.2",
+        "symfony/http-client-contracts": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "symfony/config": "^6.4|^7.0|^8.0",
+        "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+        "symfony/http-client": "^6.4|^7.0|^8.0",
+        "symfony/http-kernel": "^6.4|^7.0|^8.0"
+    },
+    "suggest": {
+        "symfony/http-client": "The HTTP client the API is talked to through",
+        "symfony/framework-bundle": "Padlet\\Bridge\\Symfony\\PadletBundle: the client as a service"
+    },
+    "autoload": {
+        "psr-4": {"Padlet\\": ""},
+        "exclude-from-classmap": ["/Tests/", "/docker/"]
+    },
+    "autoload-dev": {"psr-4": {"Padlet\\Tests\\": "Tests/"}},
+    "config": {"sort-packages": true}
+}
