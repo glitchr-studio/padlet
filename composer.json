@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Padlet's API in PHP: a user's boards, their sections and posts, read with an API key, a post added - and its Symfony bundle.",
     "keywords": ["padlet", "api", "education", "board"],
-    "license": "LGPL-3.0-or-later",
+    "license": "MIT",
     "authors": [{"name": "Marco Meyer", "email": "marco.meyer@glitchr.io"}],
     "require": {
         "php": ">=8.2",
